@@ -2,10 +2,8 @@ from flask import Flask, request, jsonify
 from nltk.sentiment import SentimentIntensityAnalyzer
 import nltk
 
-print(nltk.data.path)
-
-# دانلود lexicon برای تحلیل احساسات
-nltk.download('vader_lexicon')
+# تنظیم دایرکتوری محلی برای فایل‌های NLTK
+nltk.data.path.append('./nltk_data') 
 
 # ایجاد اپلیکیشن Flask
 app = Flask(__name__)
